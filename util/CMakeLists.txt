@@ -88,12 +88,6 @@ install(TARGETS kenlm_util
   ARCHIVE DESTINATION lib
 )
 
-
-if (NOT WIN32)
-AddExes(EXES probing_hash_table_benchmark
-        LIBRARIES kenlm_util ${Boost_LIBRARIES} Threads::Threads)
-endif()
-
 # Only compile and run unit tests if tests should be run
 if(BUILD_TESTING)
   set(KENLM_BOOST_TESTS_LIST
